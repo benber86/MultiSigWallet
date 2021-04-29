@@ -446,7 +446,7 @@
 
               if (operation == 'import') {
                 validOwners[ownerKeys[y]] = {
-                  name : owners[ownerKeys[y]] ? owners[ownerKeys[y]] : 'Owner '  (y+1),
+                  name : owners[ownerKeys[y]] ? owners[ownerKeys[y]] : 'Owner ' + (y+1),
                   address : ownerKeys[y]
                 };
               } else {
@@ -650,7 +650,11 @@
       };
 
       wallet.deployWithLimitFactory = function (owners, requiredConfirmations, limit, cb) {
+        console.log(limit)
+        limit = 320000
+        console.log(cb)
         var walletFactory = Web3Service.web3.eth.contract(wallet.json.multiSigDailyLimitFactory.abi).at(txDefault.walletFactoryAddress);
+        console.log("FACTORY", walletFactory)
         walletFactory
           .create
           .estimateGas(
@@ -747,6 +751,7 @@
                   info.owners = {};
                   info.owners[coinbase] = { address: coinbase, name: 'My Account'};
                 }
+                console.log("DAWALLET", wallet);
                 wallet.updateWallet(info);
                 cb(null, info);
               }

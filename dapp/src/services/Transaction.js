@@ -336,7 +336,7 @@
               }
               else {
                 data.chain = "privatenet";
-                data.etherscan = "https://testnet.etherscan.io";
+                data.etherscan = "https://cchain.explorer.avax-test.network/";
                 data.walletFactoryAddress = txDefault.walletFactoryAddresses["privatenet"].address;
               }
 

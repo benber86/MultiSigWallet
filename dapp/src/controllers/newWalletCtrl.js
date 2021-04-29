@@ -58,7 +58,8 @@
       };
 
       $scope.deployFactoryWallet = function () {
-        Wallet.deployWithLimitFactory(Object.keys($scope.owners), $scope.confirmations, new Web3().toBigNumber($scope.limit).mul('1e18'),
+        console.log("WALLETDEPLOY", Wallet)
+        Wallet.deployWithLimitFactory(Object.keys($scope.owners), $scope.confirmations, 32000,
           function (e, tx) {
             if (e) {
               Utils.dangerAlert(e);

@@ -10,9 +10,9 @@ var txDefaultOrig =
     "privacyPolicy": "https://gnosis.io/privacy-policy",
     "imprint": "https://wallet.gnosis.pm/imprint.html"
   },
-  gasLimit: 3141592,
-  gasPrice: 18000000000,
-  ethereumNode: "https://mainnet.infura.io:443",
+  gasLimit: 350000,
+  gasPrice: 225,
+  ethereumNode: "https://api.avax-test.network/ext/bc/C/rpc",
   connectionChecker: {
     method : "OPTIONS",
     url : "https://www.google.com",
@@ -27,7 +27,7 @@ var txDefaultOrig =
   wallet: "injected",
   defaultChainID: null,
   // Mainnet
-  walletFactoryAddress: "0x6e95c8e8557abc08b46f3c347ba06f8dc012763f",
+  walletFactoryAddress: "0x5Ae68C87FC51E78996195d0D54FB60277c244431", // "0x6e95c8e8557abc08b46f3c347ba06f8dc012763f",
   tokens: [
     {
       'address': '0x6810e776880c02933d47db1b9fc05908e5386b96',
@@ -142,11 +142,11 @@ var txDefault = {
   ethereumNodes : [
     {
       url : "https://mainnet.infura.io:443",
-      name: "Remote Mainnet"
+      name: "Remote Mainnet 1"
     },
     {
       url : "https://ropsten.infura.io:443",
-      name: "Remote Ropsten"
+      name: "Remote Ropsten 3"
     },
     {
       url : "https://kovan.infura.io:443",
@@ -157,7 +157,7 @@ var txDefault = {
       name: "Remote Rinkeby"
     },
     {
-      url : "http://localhost:8545",
+      url : "https://api.avax-test.network/ext/bc/C/rpc", // http://localhost:8545",
       name: "Local node"
     }
   ],
@@ -180,7 +180,7 @@ var txDefault = {
     },
     'privatenet': {
       name: 'Privatenet',
-      address: '0xd79426bcee5b46fde413ededeb38364b3e666097'
+      address: '0x5Ae68C87FC51E78996195d0D54FB60277c244431', // '0xd79426bcee5b46fde413ededeb38364b3e666097'
     }
   }
 };
